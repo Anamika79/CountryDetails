@@ -1,0 +1,38 @@
+﻿@model Country
+
+<h2>Country Details</h2>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Country</th>
+            <th scope="col">Capital</th>
+            <th scope="col">Population</th>
+            <th scope="col">Currency</th>
+            <th scope="col">Flag</th>
+        </tr>
+    </thead>
+
+    <tbody id="table_body">
+        <tr>
+            <td style="max-width: 100px;">@Model.ID</td>
+            <td>@Model.Name</td>
+            <td>@Model.Capital</td>
+            <td>@Model.Population</td>
+            <td>@Model.Currency</td>
+            <td><img src="@Model.Flag" alt="Flag" style="width:100px" /></td>
+        </tr>
+    </tbody>
+</table>
+
+@*<div>
+    <p>Name: @Model.Name</p>
+    <p>Id: @Model.ID</p>
+    <p>Capital: @Model.Capital</p>
+    <p>Currency: @Model.Currency</p>
+    <p>Population: @Model.Population</p>
+    <img src="@Model.Flag" alt="Flag" width="100px" height="auto" />
+</div>*@
+
+

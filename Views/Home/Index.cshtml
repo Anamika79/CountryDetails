@@ -1,0 +1,22 @@
+﻿@model CountryModel //expects a CountryModel object to be passed
+
+@{
+    ViewBag.Title = "Country List";
+}
+
+<h2>Country List</h2>
+
+@using (Html.BeginForm("SubmitAction", "Home", FormMethod.Post))
+{
+    <select name="selectedCountry" class="form-control">
+        <option value="">Select a country</option>
+        @foreach (var country in Model.CountryNames)
+        {
+            <option value="@country">@country</option>
+        }
+    </select>
+    <input type="submit" value="Submit" />
+}
+
+
+
